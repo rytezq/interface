@@ -44,4 +44,4 @@ namespace @interface
     {
         public void Test() {
     }
-}
+
