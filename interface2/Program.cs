@@ -15,7 +15,7 @@ namespace interface2
             Parrot kesha = new Parrot();
             kesha.Voice();
             Cat kotyara = new Cat();
-            Console.WriteLine($"Введите имя кота(кошки)");
+            Console.WriteLine($"Введите имя котяры");
             kotyara.name = Console.ReadLine();
             Console.WriteLine($"Введите пол");
             kotyara.gender = Console.ReadLine();
@@ -24,15 +24,15 @@ namespace interface2
             Console.WriteLine($"Введите вес");
             kotyara.weight = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Ваш питомец породистый (Да/Нет)");
-            if (Console.ReadLine().ToLower().Trim() == "да")
+            if (Console.ReadLine().ToLower() == "да")
             {
                 kotyara.breed = true;
             }
-            else if (Console.ReadLine().ToLower().Trim() == "нет")
+            else if (Console.ReadLine().ToLower() == "нет")
             {
                 kotyara.breed = false;
             }
-            Console.WriteLine($"Рассчет суточноый нормы, сухого и влажного корма, а так же воды");
+            Console.WriteLine($"Рассчет суточноый нормы");
             kotyara.EatNorm(kotyara.gender, kotyara.age, kotyara.weight, kotyara.breed);
             kotyara.Voice();
         }
@@ -71,7 +71,7 @@ namespace interface2
             }
             public void EatNorm(string gender, int age, int weight, bool breed)
             {
-                if (gender.ToLower() == "male")
+                if (gender.ToLower() == "мальчик")
                 {
                     if (breed)
                     {
@@ -170,7 +170,7 @@ namespace interface2
                         }
                     }
                 }
-                else if (gender.ToLower() == "female")
+                else if (gender.ToLower() == "девочка")
                 {
                     if (breed)
                     {
